@@ -49,7 +49,7 @@ class App extends Component {
             this.setState({
                 scannerIsRunning: true
             });
-        });
+        }.bind(this));
 
         Quagga.onProcessed(function (result) {
             var drawingCtx = Quagga.canvas.ctx.overlay,
