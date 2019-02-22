@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import Quagga from 'quagga'
 import configQuagga from './configQuagga.js';
 
-import image from './IMG_2934.jpg';
+// import image from './IMG_2934.jpg';
 
 class App extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
-            codigo: "Procesando...",
+            codigo: "START",
             scannerIsRunning: false
         }
 
@@ -17,41 +17,48 @@ class App extends Component {
     }
 
     componentDidMount() {
-        Quagga.decodeSingle({
-            decoder: {
-                readers: ["ean_reader"],
-            },
-            locate: true,
-            src: image
-        }, function(result){
-            if(result.codeResult) {
-                this.setState({
-                    codigo: result.codeResult.code
-                });
-            } else {
-                this.setState({
-                    codigo: "Error de lectura"
-                });
-            }
-        }.bind(this));
+        // Quagga.decodeSingle({
+        //     decoder: {
+        //         readers: ["ean_reader"],
+        //     },
+        //     locate: true,
+        //     src: image
+        // }, function(result){
+        //     if(result.codeResult) {
+        //         this.setState({
+        //             codigo: result.codeResult.code
+        //         });
+        //     } else {
+        //         this.setState({
+        //             codigo: "Error de lectura"
+        //         });
+        //     }
+        // }.bind(this));
     }
 
     startScanner() {
         Quagga.init(configQuagga, function (err) {
             if (err) {
                 console.log(err);
-                return
+                this.setState({
+                    codigo: "Error"
+                });
             }
 
             console.log("Initialization finished. Ready to start");
             Quagga.start();
 
             this.setState({
-                scannerIsRunning: true
+                scannerIsRunning: true,
+                codigo: "Initialization finished. Ready to start"
             });
         }.bind(this));
 
         Quagga.onProcessed(function (result) {
+            this.setState({
+                codigo: "Procesando..."
+            });
+
             var drawingCtx = Quagga.canvas.ctx.overlay,
             drawingCanvas = Quagga.canvas.dom.overlay;
 
@@ -77,6 +84,10 @@ class App extends Component {
 
 
         Quagga.onDetected(function (result) {
+            this.setState({
+                codigo: result.codeResult.code
+            });
+
             console.log("Barcode detected and processed : [" + result.codeResult.code + "]", result);
         });
     }
@@ -100,7 +111,7 @@ class App extends Component {
         return (
             <div className="App">
             <h1>Código: {this.state.codigo}</h1>
-            <img src={image} alt=""/>
+            {/*<img src={image} alt=""/>*/}
             <div id="scanner-container"></div>
             <input onClick={this.handlerClick} type="button" id="btn" value="Start/Stop the scanner" />
             </div>

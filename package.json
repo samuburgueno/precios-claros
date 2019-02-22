@@ -1,6 +1,6 @@
 {
   "name": "preciosclaros",
-  "homepage": "http://samuburgueno.github.io/precios-claros",
+  "homepage": "https://samuburgueno.github.io/precios-claros",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,7 +8,8 @@
     "quagga": "^0.12.1",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
-    "react-scripts": "2.1.5"
+    "react-scripts": "2.1.5",
+    "react-webcam": "^1.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
