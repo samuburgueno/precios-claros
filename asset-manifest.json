@@ -1,13 +1,13 @@
 {
   "main.css": "/precios-claros/static/css/main.0dc5a2a5.chunk.css",
-  "main.js": "/precios-claros/static/js/main.7e439da8.chunk.js",
-  "main.js.map": "/precios-claros/static/js/main.7e439da8.chunk.js.map",
+  "main.js": "/precios-claros/static/js/main.f89f66af.chunk.js",
+  "main.js.map": "/precios-claros/static/js/main.f89f66af.chunk.js.map",
   "runtime~main.js": "/precios-claros/static/js/runtime~main.5506e155.js",
   "runtime~main.js.map": "/precios-claros/static/js/runtime~main.5506e155.js.map",
-  "static/js/2.e14844bd.chunk.js": "/precios-claros/static/js/2.e14844bd.chunk.js",
-  "static/js/2.e14844bd.chunk.js.map": "/precios-claros/static/js/2.e14844bd.chunk.js.map",
+  "static/js/2.ddf642f1.chunk.js": "/precios-claros/static/js/2.ddf642f1.chunk.js",
+  "static/js/2.ddf642f1.chunk.js.map": "/precios-claros/static/js/2.ddf642f1.chunk.js.map",
   "index.html": "/precios-claros/index.html",
-  "precache-manifest.d67ff24ee9a7c8b45ad16b9751907f0b.js": "/precios-claros/precache-manifest.d67ff24ee9a7c8b45ad16b9751907f0b.js",
+  "precache-manifest.e73089f6135d897985db1b3f40c0deba.js": "/precios-claros/precache-manifest.e73089f6135d897985db1b3f40c0deba.js",
   "service-worker.js": "/precios-claros/service-worker.js",
   "static/css/main.0dc5a2a5.chunk.css.map": "/precios-claros/static/css/main.0dc5a2a5.chunk.css.map"
 }
