@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "d1f2a8f558db8b0b9aca",
+    "revision": "eaa2033b427d881d57fa",
     "url": "/precios-claros/static/css/main.a9c4c629.chunk.css"
   },
   {
-    "revision": "d1f2a8f558db8b0b9aca",
-    "url": "/precios-claros/static/js/main.d1f2a8f5.chunk.js"
+    "revision": "eaa2033b427d881d57fa",
+    "url": "/precios-claros/static/js/main.eaa2033b.chunk.js"
   },
   {
     "revision": "5506e155e34b66034e84",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/precios-claros/static/js/2.20ff2c7c.chunk.js"
   },
   {
-    "revision": "560fc07abc12e4a07413519d9f06e5bf",
+    "revision": "5b90f66ad966e4a6f1cc6ada1a2bf980",
     "url": "/precios-claros/index.html"
   }
 ];
